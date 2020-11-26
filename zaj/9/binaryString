@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+
+    char tekst[] = "Jakis tekst";
+
+    FILE *plik = fopen("data.bin","wb");
+
+    fwrite(tekst, sizeof(tekst[0]), (sizeof(tekst)/sizeof(tekst[0])), plik);
+
+    fclose(plik);
+    return 0;
+}
